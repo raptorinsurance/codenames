@@ -1,0 +1,29 @@
+#:kivy 1.9.1
+
+<CodenamesGame>:
+    card_grid: card_grid
+
+    FloatLayout:
+        size: root.size
+        pos: root.pos
+        CardGrid:
+            pos: root.pos
+            size: root.size
+            id: card_grid
+
+<CardGrid>:
+    GridLayout:
+        id: grid
+        x: root.width/4
+        top: root.height/4 * 3
+        col_default_width: 200
+        row_default_height: 100
+        rows: 5
+        cols: 5
+        spacing: 15
+
+<Card>:
+    Button:
+        id: button
+        pos: root.pos
+        size: root.size
